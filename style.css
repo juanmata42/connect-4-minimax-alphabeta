@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'star_jedi_hollowregular';
+    src: url('starjhol-webfont.woff2') format('woff2'),
+        url('starjhol-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-image: url("background.jpg");
+    background-color: #cccccc;
+    color: #f9d71c;
+    font-family: 'star_jedi_hollowregular';
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 98vh;
+}
+
+.box-left {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.hover {
+    background-color: #F4F4F4;
+}
+
+#coin {
+    position: absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+}
+
+.finished td:hover::after {
+    background-color: transparent !important;
+}
+
+.box-right {
+    border: 1.48vh double #f9d71c;
+    border-radius: 2.97vh;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    padding: 1vh;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+#game_board {
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0.5vh;
+}
+
+
+.titlerow {
+    font-size: 11vh;
+
+}
+
+#game_board td {
+    width: 11vh;
+    height: 11vh;
+    background-color: Transparent;
+    border: 0.49vh solid #f9d71c;
+    border-radius: 1vh;
+}
+
+#game_board td img{
+    margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#game_board .win {
+    animation: animationFrames 1s infinite;
+    -webkit-animation: animationFrames 1s infinite;
+    -moz-animation: animationFrames 1s infinite;
+    -o-animation: animationFrames 1s infinite;
+    -ms-animation: animationFrames 1s infinite;
+}
+
+@keyframes animationFrames {
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes animationFrames {
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animationFrames {
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes animationFrames {
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes animationFrames {
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#debug {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+#tablaOpciones {
+    border: 1.48vh double #f9d71c;
+    border-radius: 2.97vh;
+    display: flex;
+    font-size: 8vh;
+    order: 1;
+}
+
+.botonesSelectores {
+    border-radius: 50%;
+    border: 0.49vh solid #f9d71c;
+    width: 14.86vh;
+    height: 14.86vh;
+    background-color: Transparent;
+}
+
+.botonesSelectores img {
+    filter: grayscale(100%);
+    transition: filter 600ms ease;
+}
+
+.botonesSelectores img:hover {
+    filter: grayscale(0);
+}
+
+.botonesSelectores img:focus {
+    filter: grayscale(0);
+}
+
+.seleccion {
+    border-radius: 50%;
+    border: 0.49vh solid #f9d71c;
+    width: 14.86vh;
+    height: 14.86vh;
+    background-color: Transparent;
+    filter: grayscale(0) important;
+}
+
+.noSeleccion {
+    border-radius: 50%;
+    border: 0.49vh solid #f9d71c;
+    width: 14.86vh;
+    height: 14.86vh;
+    background-color: Transparent;
+    filter: grayscale(100%) !important;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#restart {
+    border: 1.48vh double #f9d71c;
+    border-radius: 2.97vh;
+    font-size: 10vh;
+    background-color: Transparent;
+    font-family: 'star_jedi_hollowregular';
+    color: #f9d71c;
+    vertical-align: middle;
+    line-height: 14.86vh;
+    padding-bottom: 1.48vh;
+    order: 2;
+    transition: all 1s ease;
+    background: center;
+}
+
+#restart:hover {
+    background: url("hyperspace.gif") center;
+    font-size: 10.5vh;
+    background-size: cover;
+}
+
+.status-running,
+.status-won,
+.status-lost {
+    padding: 0px 2px;
+    color: #333;
+}
+
+.status-running {
+    background: #ccc;
+}
+
+.status-won {
+    background: #5FBF5F;
+}
+
+.status-lost {
+    background: #F36051;
+}
+
+.status-tie {
+    background: #A4E7F0;
+}
+
+
+.mano {
+    pointer-events: none;
+    height: 7.92vh;
+    width: 7.92vh;
+    position: absolute;
+    z-index: 50;
+}
+
+.cursor {
+    cursor: default;
+}
+
+#fin {
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 49;
+    width: 50%;
+    height: 50%;
+    border: 1.48vh double #f9d71c;
+    border-radius: 2.97vh;
+    font-size: 10vh;
+    text-align: center;
+    display: none;
+}
+.lightsaber{
+    background: url("lightsaberanimation.gif") center;
+    background-size: cover;
+    overflow:hidden;
+}

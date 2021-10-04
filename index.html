@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Connect 4</title>
+    <link rel="icon" href="vaderLogo.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box-left">
+            <table id="tablaOpciones">
+                <tr>
+                    <th colspan="4">Player 1</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" id="rebeldes.png" onclick="P1Selector(this)" class="botonesSelectores"><img src="rebeldes.png"></button></td>
+                    <td><button type="button" id="imperio.png" onclick="P1Selector(this)" class="botonesSelectores"><img src="imperio.png"></button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan="4">Player 2</th>
+                </tr>
+                <tr>
+                    <td><button type="button" id="rebeldes2.png" onclick="P2Selector(this)" class="botonesSelectores"><img src="rebeldes2.png"></button></td>
+                    <td><button type="button" id="imperio2.png" onclick="P2Selector(this)" class="botonesSelectores"><img src="imperio2.png"></button></td>
+                    <td><button type="button" id="droide2.png" onclick="P2Selector(this)" class="botonesSelectores"><img src="droide2.png"></button></td>
+                    <td><button type="button" id="droidemalo2.png" onclick="P2Selector(this)" class="botonesSelectores"><img src="droidemalo2.png"></button></td>
+                </tr>
+            </table>
+            <button id="restart" onclick="Game.restartGame();" type="submit">restart</button>
+        </div>
+    <div class="box-right">
+        <div class="titlerow">connect 4</div>
+        <table id="game_board" cellpadding="0"></table>
+    </div>
+    <div class="mano" id="Mrebelde.png"><img src="Mrebelde.png"></div>
+    <div class="mano" id="Mimperio.png"><img src="Mimperio.png"></div>
+    <div id="fin">The empire wins</div>
+    <script>
+    function selectAlgorithm(that) {
+        window.location = '../' + that.value + '/index.html';
+    };
+    </script>
+    <script src="connect4.js"></script>
+</body>
+
+</html>
